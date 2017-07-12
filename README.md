@@ -41,7 +41,7 @@ export ANDROID_NDK_ROOT=/your/path/to/_android/android-ndk-r10e
 export OPENSSL_VERSION="openssl-1.0.2k"
 ./build-all-arch.sh
 ```
-
+*Note: If you are building Qt library, just skip steps below, put libcryto.so & libssl.so along with your Qt librarys and it will be all fine.*
 ## Modify .pro
 insert this line into your .pro
 

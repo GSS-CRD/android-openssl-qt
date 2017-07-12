@@ -11,7 +11,7 @@ mkdir prebuilt
 curl -O "https://www.openssl.org/source/${OPENSSL_VERSION}.tar.gz"
 tar xfz "${OPENSSL_VERSION}.tar.gz"
 
-archs=(armeabi-v7a x86)
+archs=(armeabi-v7a arm64-v8a x86)
 
 for arch in ${archs[@]}; do
     xLIB="/lib"
@@ -26,18 +26,18 @@ for arch in ${archs[@]}; do
             _ANDROID_ARCH=arch-arm64
             _ANDROID_EABI=aarch64-linux-android-4.9
             #no xLIB="/lib64"
-            configure_platform="linux-generic64 -DB_ENDIAN" ;;
+            configure_platform="linux-generic64" ;;
         "mips")
             _ANDROID_TARGET_SELECT=arch-mips
             _ANDROID_ARCH=arch-mips
             _ANDROID_EABI=mipsel-linux-android-4.9
-            configure_platform="android -DB_ENDIAN" ;;
+            configure_platform="android" ;;
         "mips64")
             _ANDROID_TARGET_SELECT=arch-mips64
             _ANDROID_ARCH=arch-mips64
             _ANDROID_EABI=mips64el-linux-android-4.9
             xLIB="/lib64"
-            configure_platform="linux-generic64 -DB_ENDIAN" ;;
+            configure_platform="linux-generic64" ;;
         "x86")
             _ANDROID_TARGET_SELECT=arch-x86
             _ANDROID_ARCH=arch-x86

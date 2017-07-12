@@ -183,8 +183,9 @@ export ARCH=arm
 export CROSS_COMPILE="arm-linux-androideabi-"
 
 if [ "$_ANDROID_TARGET_SELECT" == "arch-arm64-v8a" ]; then
-	export MACHINE=armv7
-	export ARCH=arm64
+	export MACHINE=armv8
+       export SYSTEM=android64
+       export ARCH=arm
 	export CROSS_COMPILE="aarch64-linux-android-"
 fi
 

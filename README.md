@@ -4,7 +4,7 @@ scripts to generate openssl .so to be used from Qt Android Projects on MacOS
 Building Qt mobile Apps for Android there's a problem if App should run on Android 7+, because Google removed openssl.
 You must build openssl .so libs by yourself
 
-There's a documentation from Qt HowTo add openssl:
+There's a documentation from Qt How To add openssl:
 http://doc.qt.io/qt-5/opensslsupport.html 
 
 Unfortunately this fails on MacOS with error 
@@ -28,7 +28,7 @@ because this would be a security hole to embed .so you don't have built from ori
 I did small modifications to the scripts to run them on OSX
 Please check the environment values of setenv-android-mod.sh
 
-## HowTo create libssl.so and libcrypto.so
+## How To create libssl.so and libcrypto.so
 Clone this repo to a location you can refer to from your Qt projects.
 
 Open Terminal and do:
